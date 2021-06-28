@@ -77,7 +77,7 @@
 
     <div class="container-md p-3 my-3 border bg-dark text-white" id="about">
       <h2> About Us</h2>
-      <p> We are a health care service in Downtown, Ottawa. Book counselling with a physician easily and quickly. Talks online, in person or by phone</p>
+      <p> We are a health care service in Downtown, Ottawa. Book counselling with a physician easily and quickly. Talks online, in person or by phone.</p>
     </div>
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
 
@@ -158,7 +158,8 @@
                           
                             <label>Name: <input id="name" type="text" value=""></label><br>
 
-                            <label>Phone: <input id  = "phoneNumber" type="text" value="" placeholder="(XXX)-XXX-XXXX"></label><br>
+                            <label>Phone: <input id  = "phoneNumber" type="text" value="" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></label><br>
+
 
                             <label>Choose Doctor:</label>
 
@@ -184,18 +185,20 @@
                             <br>
                             <br>
                             <label>What Date: <input type="date" value=""></label>
-                            </form>
+                    
                           
                             <label>What Time: <input id="timeBook" type="time" value=""></label> <br>
                             <h3><img src="images/payment.png" width="165" height="35"> Payment</h3>
            							 Accepted Cards<br>
-                            <label>Credit Card # (Will be charged in the event of a last-minute cancellation):</label> <input id  = "cardNumber" type="text" value="" placeholder="XXXX XXXX XXXX XXXX"
+                            <label>Credit Card # (Will be charged in the event of a last-minute cancellation):</label> <input id  = "cardNumber" type="text" value="" placeholder="XXXX XXXX XXXX XXXX" 
                                 data-toggle="popover" data-content="Asking for the credit card to gaurentee booking, in case of a 
-                                missed appointment your card will be charged $1">
+                                missed appointment your card will be charged $1" pattern="[0-9\s]{13,19}" required> 
                           
-                        </form>
+                        
+
                         <br>
-                       <button type="button" class="btn btn-dark" data-dismiss="modal"> Book Appointment</button>
+                       <button type="submit" class="btn btn-dark"  > Book Appointment</button>
+                   </form>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -320,7 +323,7 @@
     
 
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <footer>
         <p>Website Designed By <a href="mailto:imiragesz@gmail.com"> Mirage Mohammad</a>
         </p>
